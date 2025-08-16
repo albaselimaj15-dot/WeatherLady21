@@ -13,22 +13,67 @@ public class Location {
     private String city;
     private String region;
     private String country;
-    private double latitude;
+    private double latitude;      //KORDINATAT GJEOGRAFIKE
     private double longitude;
 
     public Location (){
 
     }
-    public Location(UUID id) {
+    public Location(UUID id,String city,String region,String country,double latitude,double longitude) {
         this.id = id;
+        this.city=city;
+        this.country=country;
+        this.latitude=latitude;
+        this.region=region;
+        this.longitude=longitude;
     }
 
     public String getCity() {
         return city;
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     @Override
